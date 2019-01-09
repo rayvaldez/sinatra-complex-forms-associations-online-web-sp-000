@@ -27,6 +27,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
+    binding.pry
     if !params[:owner][:name].empty?
       @pet.owner = Owner.create(:name => params[:owner][:name])
     else
