@@ -18,7 +18,6 @@ class PetsController < ApplicationController
       @pet.owner = Owner.find_by_id(params[:pet][:owner_id])
     end
     @pet.save
-    raise params.inspect
     redirect to "pets/#{@pet.id}"
   end
 
