@@ -49,7 +49,7 @@ class PetsController < ApplicationController
 
   get '/pets/:id' do
     @pet = Pet.find(params[:id])
-    @pet.owner = Pet.find_by_id(params[:owner][:name])
+    @pet.owner = Pet.find_by_id(params[:owner_name])
     erb :'/pets/show'
   end
 end
