@@ -12,7 +12,6 @@ class PetsController < ApplicationController
 
   post '/pets' do
     @pet = Pet.create(params[:pet])
-    raise params.inspect
     if !params["owner_name"]["pet_name"].empty?
       @pet.owners << Owner.create(name: params["owner_name"]["pet_name"])
     end
