@@ -37,7 +37,7 @@ class PetsController < ApplicationController
       @pet.name = params[:pet][:name]
     end
     @pet.save
-  
+
     redirect to "pets/#{@pet.id}"
   end
 
